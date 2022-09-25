@@ -31,15 +31,15 @@ The Java constraint for matching the Tripod Tiers with the Tripod Selection.
 I also have a generated variable for the total skillpoint cost of the build.
 
 A generated variable for the total skillpoint cost of the build: 
-![Alt text](./Pictures/GeneratedVariableSkillpoints.PNG.PNG "Generated Varibale TotalSkillpoints")
+![Alt text](./Pictures/GeneratedVariableSkillpoints.PNG "Generated Varibale TotalSkillpoints")
 
 A link to the website that I am modelling: https://maxroll.gg/lost-ark/build-guides/robust-spirit-soulfist-raid-guide
 
 A ScreenShot of what I am trying to model
-![Alt text](./Pictures/SkillsRobustSpritLostArk.PNG.PNG "Matching Skills Constraint")
+![Alt text](./Pictures/SkillsRobustSpritLostArk.PNG "Matching Skills Constraint")
 
 The ECore Model
-![Alt text](./Pictures/Assignment1EcoreDiagram.png.png.PNG "Matching Skills Constraint")
+![Alt text](./Pictures/Assignment1EcoreDiagram.png.png "Matching Skills Constraint")
 
 An Instance of the ECore model modelling a build guide 
-![Alt text](./Pictures/modelinstance.png.PNG "Matching Skills Constraint")
+![Alt text](./Pictures/modelinstance.png "Matching Skills Constraint")
