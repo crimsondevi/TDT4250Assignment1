@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="lostarkguides" nsURI="lostarkguides" nsPrefix="lostarkguides">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="validationDelegates" value="http://www.eclipse.org/acceleo/query/1.0"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Buildguide">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Class" lowerBound="1" eType="#//Class"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="buildSkills" eType="#//skillsSelection"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalSkillPointCost" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Class">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Skills" upperBound="-1"
+        eType="#//Skill" containment="true" eOpposite="#//Skill/Owner"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Skill">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Awakening" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="skillLevel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Owner" eType="#//Class"
+        eOpposite="#//Class/Skills"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Tripods" upperBound="-1"
+        eType="#//Tripod" containment="true" eOpposite="#//Tripod/Skill"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Tripod">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Tier" eType="#//TripodTier"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Skill" eType="#//Skill"
+        eOpposite="#//Skill/Tripods"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TripodTier">
+    <eLiterals name="Tier1"/>
+    <eLiterals name="Tier2" value="1"/>
+    <eLiterals name="Tier3" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="skillsSelection">
+    <eAnnotations source="http://www.eclipse.org/acceleo/query/1.0">
+      <details key="awakeningSkill" value="self.awakening.Awakening"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="awakeningSkill"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="awakening" lowerBound="1"
+        eType="#//Skill"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="normalSkills" lowerBound="8"
+        upperBound="8" eType="#//Skill"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Tripods" lowerBound="8"
+        upperBound="8" eType="#//tripodSelection" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="tripodSelection">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="skillmatching tripodTiersValid"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="t1Tripod" eType="#//Tripod"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="t2Tripod" eType="#//Tripod"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="t3Tripod" eType="#//Tripod"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Skill" lowerBound="1" eType="#//Skill"/>
+  </eClassifiers>
+</ecore:EPackage>

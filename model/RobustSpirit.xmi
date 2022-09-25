@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lostarkguides:Buildguide
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:lostarkguides="lostarkguides"
+    xsi:schemaLocation="lostarkguides lostarkguides.ecore"
+    Name="Robust Spirit Soul Fist Build">
+  <Class Name="Soul Fist">
+    <Skills
+        Name="Pulverizing Palm">
+      <Tripods
+          Name="Excelent Mobility PP"/>
+      <Tripods
+          Name="Ready Attack PP"
+          Tier="Tier2"/>
+    </Skills>
+    <Skills
+        Name="Shadowbreaker">
+      <Tripods
+          Name="Predator SB"/>
+      <Tripods
+          Name="Weak Point Detection SB"
+          Tier="Tier2"/>
+      <Tripods
+          Name="6th Sense SB"
+          Tier="Tier3"/>
+    </Skills>
+    <Skills
+        Name="Word Decimation"
+        Awakening="true"/>
+    <Skills
+        Name="CelestialPalm">
+      <Tripods
+          Name="Hard Hitter CP"/>
+      <Tripods
+          Name="Burning Hands CP"
+          Tier="Tier2"/>
+      <Tripods
+          Name="Exquisite Attack CP"
+          Tier="Tier3"/>
+    </Skills>
+    <Skills
+        Name="Flash Step">
+      <Tripods
+          Name="Excellent Mobility FS"/>
+      <Tripods
+          Name="Victory Shout FS"
+          Tier="Tier2"/>
+    </Skills>
+    <Skills
+        Name="Force Orb"/>
+    <Skills
+        Name="Merciless Pummel"/>
+    <Skills
+        Name="Energy Release"/>
+    <Skills
+        Name="Lightning Palm"/>
+  </Class>
+  <buildSkills
+      awakening="//@Class/@Skills.2"
+      normalSkills="//@Class/@Skills.0 //@Class/@Skills.1 //@Class/@Skills.3 //@Class/@Skills.4 //@Class/@Skills.5 //@Class/@Skills.6 //@Class/@Skills.7 //@Class/@Skills.8">
+    <Tripods
+        t1Tripod="//@Class/@Skills.0/@Tripods.0"
+        t2Tripod="//@Class/@Skills.0/@Tripods.1"
+        Skill="//@Class/@Skills.0"/>
+    <Tripods
+        t1Tripod="//@Class/@Skills.1/@Tripods.0"
+        t2Tripod="//@Class/@Skills.1/@Tripods.1"
+        t3Tripod="//@Class/@Skills.1/@Tripods.2"
+        Skill="//@Class/@Skills.1"/>
+    <Tripods
+        t1Tripod="//@Class/@Skills.3/@Tripods.0"
+        t2Tripod="//@Class/@Skills.3/@Tripods.1"
+        t3Tripod="//@Class/@Skills.3/@Tripods.2"
+        Skill="//@Class/@Skills.3"/>
+    <Tripods
+        t1Tripod="//@Class/@Skills.4/@Tripods.0"
+        t2Tripod="//@Class/@Skills.4/@Tripods.1"
+        Skill="//@Class/@Skills.5"/>
+    <Tripods
+        Skill="//@Class/@Skills.5"/>
+    <Tripods
+        Skill="//@Class/@Skills.6"/>
+    <Tripods
+        Skill="//@Class/@Skills.8"/>
+    <Tripods
+        Skill="//@Class/@Skills.7"/>
+  </buildSkills>
+</lostarkguides:Buildguide>
