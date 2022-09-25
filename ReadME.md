@@ -39,7 +39,7 @@ A ScreenShot of what I am trying to model
 ![Alt text](./Pictures/SkillsRobustSpritLostArk.PNG "Matching Skills Constraint")
 
 The ECore Model
-![Alt text](./Pictures/Assignment1EcoreDiagram.png.png "Matching Skills Constraint")
+![Alt text](./Pictures/Assignment1EcoreDiagram.png "Matching Skills Constraint")
 
 An Instance of the ECore model modelling a build guide 
 ![Alt text](./Pictures/modelinstance.png "Matching Skills Constraint")
